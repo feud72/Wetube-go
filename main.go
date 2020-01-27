@@ -1,9 +1,9 @@
 package main
 
 import (
+	"github.com/feud72/Wetube-go/app"
 	"log"
 	"net/http"
-	"webserver/app"
 )
 
 func main() {
