@@ -21,10 +21,6 @@ func Logout(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"success": true, "message": "Logout"})
 }
 
-func Search(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{"success": true, "message": "Search"})
-}
-
 func Upload(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"success": true, "message": "Upload Video"})
 }
