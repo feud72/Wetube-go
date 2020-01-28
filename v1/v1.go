@@ -1,8 +1,7 @@
 package v1
 
 import (
-	"github.com/feud72/Wetube-go/users"
-	"github.com/feud72/Wetube-go/videos"
+	"github.com/feud72/Wetube-go/routers"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
@@ -15,10 +14,9 @@ func ApiBaseEndpoint(c *gin.Context) {
 func BaseEndpoint() *gin.Engine {
 	g := gin.Default()
 
-	api := g.Group("/api")
-	api.GET("/", ApiBaseEndpoint)
-
-	users.UsersRouter(api.Group("/users"))
-	videos.VideosRouter(api.Group("/videos"))
+	api := g.Group("/v1")
+	routers.HomeRouter(api.Group("/"))
+	routers.UsersRouter(api.Group("/users"))
+	routers.VideosRouter(api.Group("/videos"))
 	return g
 }
