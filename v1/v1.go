@@ -11,7 +11,7 @@ func ApiBaseEndpoint(c *gin.Context) {
 }
 
 // return 자료형으로 *gin.Engine을 넘겨주어 모듈 분리
-func BaseEndpoint() *gin.Engine {
+func App() *gin.Engine {
 	g := gin.Default()
 
 	api := g.Group("/v1")

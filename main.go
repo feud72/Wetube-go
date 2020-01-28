@@ -9,6 +9,6 @@ import (
 
 func main() {
 	addr := ":3000"
-	g := v1.BaseEndpoint()
-	log.Fatal(http.ListenAndServe(addr, g))
+	app := v1.App()
+	log.Fatal(http.ListenAndServe(addr, app))
 }
