@@ -5,10 +5,20 @@ import (
 	"net/http"
 )
 
-func UsersRegister(router *gin.RouterGroup) {
-	router.GET("/", UsersRegistration)
+func UsersRouter(router *gin.RouterGroup) {
+	router.GET("/", UserIndex)
+	router.GET("/edit", UserEdit)
+	router.GET("/password", UserPassword)
 }
 
-func UsersRegistration(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{"success": true, "message": "Users Registration"})
+func UserIndex(c *gin.Context) {
+	c.JSON(http.StatusOK, gin.H{"success": true, "message": "Users index"})
+}
+
+func UserEdit(c *gin.Context) {
+	c.JSON(http.StatusOK, gin.H{"success": true, "message": "User edit"})
+}
+
+func UserPassword(c *gin.Context) {
+	c.JSON(http.StatusOK, gin.H{"success": true, "message": "User password"})
 }

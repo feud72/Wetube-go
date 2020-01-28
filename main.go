@@ -1,9 +1,10 @@
 package main
 
 import (
-	"github.com/feud72/Wetube-go/v1"
 	"log"
 	"net/http"
+
+	v1 "github.com/feud72/Wetube-go/v1"
 )
 
 func main() {
